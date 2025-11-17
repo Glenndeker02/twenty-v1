@@ -9,6 +9,11 @@ import { ConnectedAccountWorkspaceEntity } from 'src/modules/connected-account/s
 import { DashboardWorkspaceEntity } from 'src/modules/dashboard/standard-objects/dashboard.workspace-entity';
 import { FavoriteFolderWorkspaceEntity } from 'src/modules/favorite-folder/standard-objects/favorite-folder.workspace-entity';
 import { FavoriteWorkspaceEntity } from 'src/modules/favorite/standard-objects/favorite.workspace-entity';
+import { FormFieldWorkspaceEntity } from 'src/modules/form/standard-objects/form-field.workspace-entity';
+import { FormSubmissionWorkspaceEntity } from 'src/modules/form/standard-objects/form-submission.workspace-entity';
+import { FormWorkspaceEntity } from 'src/modules/form/standard-objects/form.workspace-entity';
+import { LinkHubItemWorkspaceEntity } from 'src/modules/link-hub/standard-objects/link-hub-item.workspace-entity';
+import { LinkHubWorkspaceEntity } from 'src/modules/link-hub/standard-objects/link-hub.workspace-entity';
 import { MessageChannelMessageAssociationWorkspaceEntity } from 'src/modules/messaging/common/standard-objects/message-channel-message-association.workspace-entity';
 import { MessageChannelWorkspaceEntity } from 'src/modules/messaging/common/standard-objects/message-channel.workspace-entity';
 import { MessageFolderWorkspaceEntity } from 'src/modules/messaging/common/standard-objects/message-folder.workspace-entity';
@@ -41,6 +46,11 @@ export const standardObjectMetadataDefinitions = [
   DashboardWorkspaceEntity,
   FavoriteWorkspaceEntity,
   FavoriteFolderWorkspaceEntity,
+  FormWorkspaceEntity,
+  FormFieldWorkspaceEntity,
+  FormSubmissionWorkspaceEntity,
+  LinkHubWorkspaceEntity,
+  LinkHubItemWorkspaceEntity,
   TimelineActivityWorkspaceEntity,
   WorkflowWorkspaceEntity,
   WorkflowVersionWorkspaceEntity,

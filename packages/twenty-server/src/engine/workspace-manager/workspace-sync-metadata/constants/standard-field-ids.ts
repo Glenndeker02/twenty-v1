@@ -563,6 +563,78 @@ export const DASHBOARD_STANDARD_FIELD_IDS = {
   searchVector: '20202020-0bcc-47a4-8360-2e35a7133f7a',
 } as const;
 
+export const LINK_HUB_STANDARD_FIELD_IDS = {
+  title: '20202020-6a7b-8c9d-0e1f-2a3b4c5d6e7f',
+  slug: '20202020-7b8c-9d0e-1f2a-3b4c5d6e7f8a',
+  description: '20202020-8c9d-0e1f-2a3b-4c5d6e7f8a9b',
+  avatarUrl: '20202020-9d0e-1f2a-3b4c-5d6e7f8a9b0c',
+  backgroundColor: '20202020-0e1f-2a3b-4c5d-6e7f8a9b0c1d',
+  textColor: '20202020-1f2a-3b4c-5d6e-7f8a9b0c1d2e',
+  isActive: '20202020-2a3b-4c5d-6e7f-8a9b0c1d2e3f',
+  viewCount: '20202020-3b4c-5d6e-7f8a-9b0c1d2e3f4a',
+  shareToken: '20202020-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  customDomain: '20202020-5d6e-7f8a-9b0c-1d2e3f4a5b6c',
+  linkHubItems: '20202020-6e7f-8a9b-0c1d-2e3f4a5b6c7d',
+  createdBy: '20202020-7f8a-9b0c-1d2e-3f4a5b6c7d8e',
+  position: '20202020-8a9b-0c1d-2e3f-4a5b6c7d8e9f',
+  searchVector: '20202020-9b0c-1d2e-3f4a-5b6c7d8e9f0a',
+} as const;
+
+export const LINK_HUB_ITEM_STANDARD_FIELD_IDS = {
+  linkHub: '20202020-0c1d-2e3f-4a5b-6c7d8e9f0a1b',
+  title: '20202020-1d2e-3f4a-5b6c-7d8e9f0a1b2c',
+  url: '20202020-2e3f-4a5b-6c7d-8e9f0a1b2c3d',
+  icon: '20202020-3f4a-5b6c-7d8e-9f0a1b2c3d4e',
+  order: '20202020-4a5b-6c7d-8e9f-0a1b2c3d4e5f',
+  isVisible: '20202020-5b6c-7d8e-9f0a-1b2c3d4e5f6a',
+  clickCount: '20202020-6c7d-8e9f-0a1b-2c3d4e5f6a7b',
+  createdBy: '20202020-7d8e-9f0a-1b2c-3d4e5f6a7b8c',
+  position: '20202020-8e9f-0a1b-2c3d-4e5f6a7b8c9d',
+} as const;
+
+export const FORM_STANDARD_FIELD_IDS = {
+  title: '20202020-9f0a-1b2c-3d4e-5f6a7b8c9d0e',
+  description: '20202020-0a1b-2c3d-4e5f-6a7b8c9d0e1f',
+  shareToken: '20202020-1b2c-3d4e-5f6a-7b8c9d0e1f2a',
+  targetObjectMetadataId: '20202020-2c3d-4e5f-6a7b-8c9d0e1f2a3b',
+  isActive: '20202020-3d4e-5f6a-7b8c-9d0e1f2a3b4c',
+  successMessage: '20202020-4e5f-6a7b-8c9d-0e1f2a3b4c5d',
+  redirectUrl: '20202020-5f6a-7b8c-9d0e-1f2a3b4c5d6e',
+  requireCaptcha: '20202020-6a7b-8c9d-0e1f-2a3b4c5d6e7f',
+  submissionCount: '20202020-7b8c-9d0e-1f2a-3b4c5d6e7f8a',
+  viewCount: '20202020-8c9d-0e1f-2a3b-4c5d6e7f8a9b',
+  allowMultipleSubmissions: '20202020-9d0e-1f2a-3b4c-5d6e7f8a9b0c',
+  formFields: '20202020-0e1f-2a3b-4c5d-6e7f8a9b0c1d',
+  formSubmissions: '20202020-1f2a-3b4c-5d6e-7f8a9b0c1d2e',
+  createdBy: '20202020-2a3b-4c5d-6e7f-8a9b0c1d2e3f',
+  position: '20202020-3b4c-5d6e-7f8a-9b0c1d2e3f4a',
+  searchVector: '20202020-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+} as const;
+
+export const FORM_FIELD_STANDARD_FIELD_IDS = {
+  form: '20202020-5d6e-7f8a-9b0c-1d2e3f4a5b6c',
+  targetFieldMetadataId: '20202020-6e7f-8a9b-0c1d-2e3f4a5b6c7d',
+  label: '20202020-7f8a-9b0c-1d2e-3f4a5b6c7d8e',
+  placeholder: '20202020-8a9b-0c1d-2e3f-4a5b6c7d8e9f',
+  helpText: '20202020-9b0c-1d2e-3f4a-5b6c7d8e9f0a',
+  isRequired: '20202020-0c1d-2e3f-4a5b-6c7d8e9f0a1b',
+  order: '20202020-1d2e-3f4a-5b6c-7d8e9f0a1b2c',
+  defaultValue: '20202020-2e3f-4a5b-6c7d-8e9f0a1b2c3d',
+  createdBy: '20202020-3f4a-5b6c-7d8e-9f0a1b2c3d4e',
+  position: '20202020-4a5b-6c7d-8e9f-0a1b2c3d4e5f',
+} as const;
+
+export const FORM_SUBMISSION_STANDARD_FIELD_IDS = {
+  form: '20202020-5b6c-7d8e-9f0a-1b2c3d4e5f6a',
+  recordId: '20202020-6c7d-8e9f-0a1b-2c3d4e5f6a7b',
+  submittedData: '20202020-7d8e-9f0a-1b2c-3d4e5f6a7b8c',
+  ipAddress: '20202020-8e9f-0a1b-2c3d-4e5f6a7b8c9d',
+  userAgent: '20202020-9f0a-1b2c-3d4e-5f6a7b8c9d0e',
+  referrer: '20202020-0a1b-2c3d-4e5f-6a7b8c9d0e1f',
+  createdBy: '20202020-1b2c-3d4e-5f6a-7b8c9d0e1f2a',
+  position: '20202020-2c3d-4e5f-6a7b-8c9d0e1f2a3b',
+} as const;
+
 export const STANDARD_OBJECT_FIELD_IDS = {
   activityTarget: ACTIVITY_TARGET_STANDARD_FIELD_IDS,
   activity: ACTIVITY_STANDARD_FIELD_IDS,
@@ -580,6 +652,11 @@ export const STANDARD_OBJECT_FIELD_IDS = {
   dashboard: DASHBOARD_STANDARD_FIELD_IDS,
   favorite: FAVORITE_STANDARD_FIELD_IDS,
   auditLog: AUDIT_LOGS_STANDARD_FIELD_IDS,
+  linkHub: LINK_HUB_STANDARD_FIELD_IDS,
+  linkHubItem: LINK_HUB_ITEM_STANDARD_FIELD_IDS,
+  form: FORM_STANDARD_FIELD_IDS,
+  formField: FORM_FIELD_STANDARD_FIELD_IDS,
+  formSubmission: FORM_SUBMISSION_STANDARD_FIELD_IDS,
   messageChannelMessageAssociation:
     MESSAGE_CHANNEL_MESSAGE_ASSOCIATION_STANDARD_FIELD_IDS,
   messageChannel: MESSAGE_CHANNEL_STANDARD_FIELD_IDS,
