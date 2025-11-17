@@ -435,10 +435,28 @@ Each change will be logged with:
   - packages/twenty-server/src/engine/core-modules/auth/auth.module.ts - Registered Whop controller and service
   - packages/twenty-server/.env.example - Added Whop environment variables (AUTH_WHOP_CLIENT_ID, AUTH_WHOP_CLIENT_SECRET, AUTH_WHOP_CALLBACK_URL)
 **Related Tasks**: Phase 1.2 - Whop OAuth Integration
-**Status**: 🚧 In Progress
+**Status**: ✅ Complete
+
+### Change #3
+**Date**: 2025-11-16
+**Phase**: 1.3-1.5 - Whop Core Services
+**Type**: feat
+**Component**: Backend
+**Description**: Implemented Whop API client, data sync service, and webhook handler
+**Files Created**:
+  - packages/twenty-server/src/modules/whop/services/whop-api-client.service.ts - API wrapper for Whop endpoints
+  - packages/twenty-server/src/modules/whop/services/whop-sync.service.ts - Syncs Whop data to CRM entities
+  - packages/twenty-server/src/modules/whop/controllers/whop-webhook.controller.ts - Handles Whop webhooks
+  - packages/twenty-server/src/modules/whop/types/whop-webhook.types.ts - Webhook type definitions
+  - packages/twenty-server/src/modules/whop/whop.module.ts - Whop module definition
+**Files Modified**:
+  - packages/twenty-server/src/modules/modules.module.ts - Registered WhopModule
+  - packages/twenty-server/.env.example - Added WHOP_WEBHOOK_SECRET
+**Related Tasks**: Phases 1.3, 1.4, 1.5
+**Status**: ✅ Complete
 
 ---
 
 **Last Updated**: 2025-11-16
-**Total Changes**: 2
-**Current Phase**: Phase 1.2 - Whop OAuth Integration (In Progress)
+**Total Changes**: 3
+**Current Phase**: Phase 1.6 - Whop GraphQL Schema (In Progress)
