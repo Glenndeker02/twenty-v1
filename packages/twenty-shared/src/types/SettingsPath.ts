@@ -57,4 +57,12 @@ export enum SettingsPath {
   RoleDetail = 'roles/:roleId',
   RoleObjectLevel = 'roles/:roleId/object/:objectMetadataId',
   RoleAddObjectLevel = 'roles/:roleId/add-object-permission',
+
+  LinkHubs = 'link-hubs',
+  LinkHubDetail = 'link-hubs/:linkHubId',
+  LinkHubNew = 'link-hubs/new',
+
+  Forms = 'forms',
+  FormDetail = 'forms/:formId',
+  FormNew = 'forms/new',
 }

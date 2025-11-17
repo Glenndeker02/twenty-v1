@@ -364,6 +364,30 @@ const SettingsRoleAddObjectLevel = lazy(() =>
   ),
 );
 
+const SettingsLinkHubs = lazy(() =>
+  import('~/pages/settings/link-hubs/SettingsLinkHubs').then((module) => ({
+    default: module.SettingsLinkHubs,
+  })),
+);
+
+const SettingsLinkHubDetail = lazy(() =>
+  import('~/pages/settings/link-hubs/SettingsLinkHubDetail').then((module) => ({
+    default: module.SettingsLinkHubDetail,
+  })),
+);
+
+const SettingsForms = lazy(() =>
+  import('~/pages/settings/forms/SettingsForms').then((module) => ({
+    default: module.SettingsForms,
+  })),
+);
+
+const SettingsFormDetail = lazy(() =>
+  import('~/pages/settings/forms/SettingsFormDetail').then((module) => ({
+    default: module.SettingsFormDetail,
+  })),
+);
+
 type SettingsRoutesProps = {
   isFunctionSettingsEnabled?: boolean;
   isAdminPageEnabled?: boolean;
@@ -604,6 +628,12 @@ export const SettingsRoutes = ({ isAdminPageEnabled }: SettingsRoutesProps) => (
         }
       >
         <Route path={SettingsPath.Releases} element={<SettingsReleases />} />
+        <Route path={SettingsPath.LinkHubs} element={<SettingsLinkHubs />} />
+        <Route path={SettingsPath.LinkHubNew} element={<SettingsLinkHubDetail />} />
+        <Route path={SettingsPath.LinkHubDetail} element={<SettingsLinkHubDetail />} />
+        <Route path={SettingsPath.Forms} element={<SettingsForms />} />
+        <Route path={SettingsPath.FormNew} element={<SettingsFormDetail />} />
+        <Route path={SettingsPath.FormDetail} element={<SettingsFormDetail />} />
       </Route>
     </Routes>
   </Suspense>

@@ -31,6 +31,10 @@ export enum AppPath {
 
   Authorize = '/authorize',
 
+  // Public pages
+  LinkHubPublic = '/links/:slug',
+  FormPublic = '/forms/:token',
+
   // 404 page not found
   NotFoundWildcard = '*',
   NotFound = '/not-found',

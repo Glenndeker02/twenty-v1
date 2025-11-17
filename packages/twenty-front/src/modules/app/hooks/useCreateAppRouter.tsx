@@ -27,6 +27,8 @@ import { CreateWorkspace } from '~/pages/onboarding/CreateWorkspace';
 import { InviteTeam } from '~/pages/onboarding/InviteTeam';
 import { PaymentSuccess } from '~/pages/onboarding/PaymentSuccess';
 import { SyncEmails } from '~/pages/onboarding/SyncEmails';
+import { LinkHubPublic } from '~/pages/public/LinkHubPublic';
+import { FormPublic } from '~/pages/public/FormPublic';
 
 export const useCreateAppRouter = (
   isFunctionSettingsEnabled?: boolean,
@@ -76,6 +78,8 @@ export const useCreateAppRouter = (
         </Route>
         <Route element={<BlankLayout />}>
           <Route path={AppPath.Authorize} element={<Authorize />} />
+          <Route path={AppPath.LinkHubPublic} element={<LinkHubPublic />} />
+          <Route path={AppPath.FormPublic} element={<FormPublic />} />
         </Route>
       </Route>,
     ),
