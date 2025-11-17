@@ -945,3 +945,918 @@ They receive web link with app download prompt
 - AI form correction
 - Social challenges/competitions
 - Certification programs
+
+---
+
+## In-Pool Practice Session Flow
+
+### Practice Session Entry Point
+
+```
+User is ready to practice at pool
+    ↓
+Opens AquaCoach app
+    ↓
+[Dashboard]
+    ↓
+Taps "🏊 Start Pool Session" button
+    ↓
+```
+
+---
+
+## Practice Session Selector
+
+```
+[Session Type Selection Screen]
+Header: "Choose Your Practice"
+
+[Quick Start Options - Cards]
+
+┌──────────────────────────────────┐
+│ 🎯 RECOMMENDED FOR YOU           │
+├──────────────────────────────────┤
+│ Floating Skills Practice         │
+│ Based on current lessons         │
+│                                  │
+│ Duration: 30 minutes             │
+│ Focus: Back float, front float  │
+│ Drills: 5 exercises              │
+│ Difficulty: Beginner             │
+│                                  │
+│ [Start This Session]             │
+└──────────────────────────────────┘
+
+┌──────────────────────────────────┐
+│ PRE-BUILT SESSIONS               │
+├──────────────────────────────────┤
+│                                  │
+│ ▸ First Time in Pool (20 min)   │
+│   Water confidence focus         │
+│                                  │
+│ ▸ Breathing Practice (25 min)   │
+│   Breath control drills          │
+│                                  │
+│ ▸ Freestyle Fundamentals (30 min)│
+│   Basic stroke work              │
+│                                  │
+│ [View All Pre-Built] →           │
+└──────────────────────────────────┘
+
+┌──────────────────────────────────┐
+│ CUSTOM SESSION                   │
+├──────────────────────────────────┤
+│ Build your own practice session  │
+│ [Create Custom Session]          │
+└──────────────────────────────────┘
+
+┌──────────────────────────────────┐
+│ SAVED SESSIONS (2)               │
+├──────────────────────────────────┤
+│ ▸ My Float Routine (15 min)     │
+│   Last used: 3 days ago          │
+│                                  │
+│ ▸ Weekend Workout (45 min)      │
+│   Last used: 1 week ago          │
+└──────────────────────────────────┘
+
+[Bottom Options]
+[Quick Challenge] - Random 15-min session
+[Continue Last Session] - Resume previous
+```
+
+---
+
+## Session Detail View
+
+```
+User taps "Start This Session" on recommended
+    ↓
+[Session Detail Screen]
+
+Header: "Floating Skills Practice"
+Duration: 30 minutes
+Difficulty: Beginner
+
+[Session Overview]
+"This session reinforces your recent lessons on floating. Perfect for building confidence and muscle memory."
+
+[Warm-up] (5 min)
+- Water entry and adjustment
+- Gentle movement
+- Breathing exercises
+
+[Main Practice] (20 min)
+Drill 1: Wall-Assisted Back Float (5 min)
+  - 5 reps × 30 seconds hold
+  - Rest: 30 seconds between
+
+Drill 2: Independent Back Float (5 min)
+  - 5 reps × 1 minute hold
+  - Rest: 30 seconds between
+
+Drill 3: Front Float to Back Float (5 min)
+  - 5 transitions
+  - Focus on smooth transition
+
+Drill 4: Float Recovery Practice (5 min)
+  - Practice standing up from float
+  - 8-10 repetitions
+
+[Cool-down] (5 min)
+- Gentle floating
+- Relaxation
+- Exit water safely
+
+[Equipment Needed]
+☐ None (optional: pool noodle for confidence)
+
+[Pool Requirements]
+☐ Access to shallow end (chest-deep water)
+☐ Access to pool wall
+
+[Session Options]
+☑️ Audio coaching (recommended)
+☐ Visual-only mode
+Duration: [30 min] [Adjust ▼]
+
+[Action Buttons]
+[Customize Session] - Modify drills
+[Start Session] - Begin now
+```
+
+---
+
+## Pre-Session Setup
+
+```
+User taps "Start Session"
+    ↓
+[Pre-Session Checklist]
+Header: "Before You Begin"
+
+Safety Reminders:
+☑️ I am not swimming alone (lifeguard or buddy present)
+☑️ I know where emergency equipment is located
+☑️ I have checked pool depth
+☑️ I am feeling well (no dizziness, illness)
+
+Equipment Check:
+☑️ Goggles ready
+☑️ Towel nearby
+☑️ Water bottle available
+
+Phone Setup:
+☑️ Phone in waterproof case
+☑️ Volume loud enough to hear
+☑️ Placed securely at pool edge
+
+[Enable Waterproof Mode?]
+"Waterproof mode increases screen brightness, locks orientation, and simplifies controls for pool-side use."
+
+Toggle: [ON] OFF
+
+[Test Audio]
+Button plays sample: "This is your audio coach. Can you hear me clearly?"
+
+[Final reminder]
+"⚠️ Never swim alone. Ensure lifeguard or buddy is present."
+
+[Ready to Begin]
+Large button: "I'm Ready - Start Session"
+
+User taps button
+    ↓
+[Transition Screen]
+"Get into position..."
+"Enter the pool and move to shallow end"
+Countdown: 10...9...8...7...6...5...4...3...2...1...
+
+    ↓
+SESSION BEGINS
+```
+
+---
+
+## Active Practice Session - In-Pool Interface
+
+**Waterproof mode: Activated**
+- Screen: Maximum brightness
+- Large touch targets
+- Simplified interface
+
+---
+
+### WARM-UP PHASE (0:00 - 5:00)
+
+```
+[Screen Layout]
+
+┌────────────────────────────────────┐
+│ TOP BAR                            │
+│ Session: 0:47 elapsed              │
+│ [❚❚ Pause] [✕ End]                │
+└────────────────────────────────────┘
+
+┌────────────────────────────────────┐
+│ CURRENT PHASE (Large text)         │
+│                                    │
+│     WARM-UP                        │
+│                                    │
+│  Water Entry & Adjustment          │
+│                                    │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━       │
+│ Progress: 15% (0:47 of 5:00)       │
+└────────────────────────────────────┘
+
+┌────────────────────────────────────┐
+│ CURRENT INSTRUCTION (Center)       │
+│                                    │
+│   Walk around shallow end          │
+│   Splash water on face and arms    │
+│   Get comfortable with temperature │
+│                                    │
+│   [Illustration: Person walking    │
+│    in shallow water]               │
+└────────────────────────────────────┘
+
+┌────────────────────────────────────┐
+│ TIME REMAINING (Large)             │
+│                                    │
+│        4:13                        │
+│   remaining in warm-up             │
+│                                    │
+│ [Circular countdown ring]          │
+└────────────────────────────────────┘
+
+┌────────────────────────────────────┐
+│ NEXT UP (Preview)                  │
+│ Drill 1: Wall-Assisted Back Float  │
+└────────────────────────────────────┘
+```
+
+**Audio Coaching - Automatically plays:**
+
+🔊 Voice: "Welcome to your floating practice session. Let's start with a gentle warm-up. Walk around the shallow end, splash some water on your face and arms. Take your time getting comfortable. We have 5 minutes for warm-up."
+
+At 2:30 (halfway):
+🔊 Voice: "You're halfway through warm-up. How's the water temperature? Keep moving gently. In a couple minutes we'll start our first drill."
+
+At 4:45 (15 seconds warning):
+🔊 Voice: "Warm-up almost complete. Get ready for your first drill: Wall-Assisted Back Float. Move to the pool wall now."
+
+At 5:00:
+[Automatic transition]
+
+---
+
+### DRILL 1: Wall-Assisted Back Float (5:00 - 10:00)
+
+```
+[Screen Updates]
+
+┌────────────────────────────────────┐
+│ TOP BAR                            │
+│ Session: 5:12 elapsed              │
+│ [❚❚ Pause] [✕ End]                │
+└────────────────────────────────────┘
+
+┌────────────────────────────────────┐
+│ CURRENT DRILL                      │
+│                                    │
+│  DRILL 1 of 4                      │
+│  Wall-Assisted Back Float          │
+│                                    │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━       │
+│ Drill Progress: 5% (0:12 of 5:00)  │
+└────────────────────────────────────┘
+
+┌────────────────────────────────────┐
+│ CURRENT ACTION (Very Large Text)   │
+│                                    │
+│         SWIM                       │
+│     Hold: 30 seconds               │
+│                                    │
+│ Rep 1 of 5                         │
+│                                    │
+│ [Visual: Back float illustration]  │
+│                                    │
+│ Form Focus: Keep head back         │
+└────────────────────────────────────┘
+
+┌────────────────────────────────────┐
+│ INTERVAL TIMER (Huge, Prominent)   │
+│                                    │
+│         0:18                       │
+│                                    │
+│ [Circular countdown: Green]        │
+│  ●●●●●●●●●●●●●●●●●●○○○○○○○○      │
+│                                    │
+│ Time remaining in hold              │
+└────────────────────────────────────┘
+```
+
+**Audio Coaching:**
+
+At start of drill:
+🔊 "Drill 1: Wall-Assisted Back Float. Hold the wall with both hands. Lean back gently and float for 30 seconds. Focus on keeping your head back. Let's begin!"
+
+During hold (at 15 seconds):
+🔊 "Halfway there. Keep that head back, belly button up. You're doing great!"
+
+Final countdown (last 5 seconds):
+🔊 "5...4...3...2...1...and rest!"
+
+**Screen Changes to REST:**
+
+```
+┌────────────────────────────────────┐
+│ CURRENT ACTION                     │
+│                                    │
+│         REST                       │
+│    30 seconds recovery             │
+│                                    │
+│ Rep 1 complete ✓                   │
+│ 4 more to go                       │
+│                                    │
+│ [Visual: Relaxing figure]          │
+└────────────────────────────────────┘
+
+┌────────────────────────────────────┐
+│ REST TIMER                         │
+│                                    │
+│         0:22                       │
+│                                    │
+│ [Circular countdown: Blue]         │
+│                                    │
+│ Breathe and recover                │
+└────────────────────────────────────┘
+```
+
+**Audio Coaching:**
+🔊 "Great work! Rest for 30 seconds. Breathe normally and shake out your arms. Next rep starts soon."
+
+At 10 seconds remaining:
+🔊 "10 seconds of rest left. Get ready for rep 2."
+
+At 3 seconds:
+🔊 "And...3...2...1...go!"
+
+**Cycle repeats for 5 reps:**
+- Rep 2: SWIM 30s → REST 30s
+- Rep 3: SWIM 30s → REST 30s
+- Rep 4: SWIM 30s → REST 30s
+- Rep 5: SWIM 30s → REST 30s
+
+After final rep:
+🔊 "Excellent! Drill 1 complete. Take a moment to catch your breath. Next up: Independent Back Float."
+
+[30-second transition period]
+
+```
+[Screen Shows]
+┌────────────────────────────────────┐
+│ DRILL COMPLETE ✓                   │
+│                                    │
+│ Wall-Assisted Back Float           │
+│ 5 of 5 reps completed              │
+│                                    │
+│ + 25 Points                        │
+│                                    │
+│ Next: Drill 2 in 0:18              │
+└────────────────────────────────────┘
+```
+
+---
+
+### DRILL 2: Independent Back Float (10:00 - 15:00)
+
+**Similar interface structure**
+
+🔊 "Drill 2: Independent Back Float. This time, no wall support. Float for 1 full minute. Remember everything you practiced. If you need to rest, grab the wall. Ready? Let's go!"
+
+**Interface shows:**
+- SWIM: 1:00 duration
+- Rep 1 of 5
+- Large countdown timer
+- Form reminders rotating:
+  * "Head back"
+  * "Relax"
+  * "Breathe normally"
+
+[Continues through 5 reps with REST periods]
+
+---
+
+### DRILLS 3 & 4
+
+[Follow same pattern with appropriate durations and instructions]
+
+---
+
+### COOL-DOWN PHASE (25:00 - 30:00)
+
+```
+[Screen]
+┌────────────────────────────────────┐
+│     COOL-DOWN                      │
+│  Gentle floating and relaxation    │
+│                                    │
+│  5:00 remaining                    │
+└────────────────────────────────────┘
+```
+
+🔊 "Excellent work today! Time to cool down. Float gently, breathe deeply, and relax. You've earned it!"
+
+At 1:00 remaining:
+🔊 "One more minute. When we're done, exit the water slowly and safely. Great job today!"
+
+At 0:00:
+[Session Complete]
+
+---
+
+## Session Completion
+
+```
+[Session Complete Screen]
+
+┌────────────────────────────────────┐
+│          🎉 GREAT JOB!            │
+│                                    │
+│   Session Complete                 │
+│   30:00 total time                 │
+│                                    │
+│   [Success animation]              │
+└────────────────────────────────────┘
+
+[Session Summary]
+Drills Completed: 4 of 4 ✓
+Reps Completed: 20 of 20
+Time in Water: 30 minutes
+Calories Burned: ~120 kcal (estimate)
+
+[Points Earned]
++ 100 Points
++ Streak Bonus: +20 (3 days in a row)
+Total: 120 Points
+
+[Achievements]
+🏆 Float Master - Complete 5 floating drills
+🔥 3-Day Streak - Practice 3 days in a row
+
+[Personal Best]
+⭐ New record: Most drills in single session!
+
+[Quick Stats]
+This Week: 3 sessions
+This Month: 12 sessions
+Total: 45 sessions
+
+[Action Buttons]
+[View Detailed Stats]
+[Share Progress]
+[Schedule Next Session]
+[Done]
+```
+
+---
+
+## Post-Session Actions
+
+```
+User taps "View Detailed Stats"
+    ↓
+
+[Detailed Session Analytics]
+
+Performance Breakdown:
+- Warm-up: 5:00 ✓
+- Drill 1: 5:00 ✓ (5/5 reps)
+- Drill 2: 5:00 ✓ (5/5 reps)
+- Drill 3: 5:00 ✓ (5/5 transitions)
+- Drill 4: 5:00 ✓ (8 recoveries)
+- Cool-down: 5:00 ✓
+
+Heart Rate: Not tracked
+(Connect wearable to track)
+
+Consistency:
+▓▓▓▓▓▓▓ Mon-Sun
+Last 4 weeks: 85% attendance
+
+Progress Over Time:
+[Graph showing session completion]
+
+[Export Data]
+[Share Screenshot]
+```
+
+---
+
+## In-Session Controls
+
+### Pause Menu
+
+```
+User taps [❚❚ Pause] during session
+    ↓
+
+[Overlay appears]
+Session Paused
+Timer stopped at: 12:34
+
+Options:
+- [▶️ Resume] - Continue session
+- [Skip Drill] - Move to next drill
+- [Add Time] - Extend rest period
+- [Adjust Audio] - Volume control
+- [End Session] - Finish early
+
+Emergency:
+- [Emergency Exit] - Safety protocol
+```
+
+### Emergency Exit Protocol
+
+```
+User taps [Emergency Exit]
+    ↓
+
+[Warning Screen]
+⚠️ Are you sure?
+
+"Only use this if you need to exit the pool immediately for safety reasons."
+
+Buttons:
+- [I'm Safe - Just Tired]
+  → Ends session normally, saves progress
+
+- [Emergency Situation]
+  → Immediate exit, no save
+  → Displays emergency contacts
+  → Optional: Send location to emergency contact
+
+- [Cancel] - Return to pause menu
+```
+
+---
+
+## Adaptive Features
+
+### Difficulty Adjustment
+
+```
+If user struggles with drill:
+
+[Mid-Session Prompt]
+"Having trouble with this drill?"
+
+Options:
+- "Yes, it's too hard"
+  → Reduces reps or duration
+  → Offers easier variation
+
+- "No, I'm fine"
+  → Continues as planned
+
+- "Skip this drill"
+  → Moves to next drill
+  → Marks for review
+```
+
+### Real-Time Coaching Tips
+
+```
+During rest periods:
+
+[Coaching Cards rotate]
+💡 Tip: "Keep your core engaged"
+💡 Tip: "Look straight up, not forward"
+💡 Tip: "Relax your shoulders"
+
+[Optional: Video snippet]
+"Quick form check" (10-second clip)
+```
+
+---
+
+## Technical Requirements
+
+### Waterproof Mode Specifications
+- Screen brightness: 100%
+- Touch sensitivity: Increased for wet fingers
+- Orientation lock: Portrait
+- Screen timeout: Disabled
+- Notification banner: Minimized
+- Button size: Minimum 60x60px
+- Font size: Minimum 18pt for readability
+
+### Audio Engineering
+- Voice coaching: Clear, encouraging tone
+- Background music: Optional, low volume
+- Countdown beeps: Distinct, audible over pool noise
+- Volume auto-adjust: Compensate for ambient noise
+- Waterproof speaker recommended
+
+### Battery Management
+- Session duration estimate: 30 min = ~5% battery
+- Low battery warning at 15%
+- Auto-save every 30 seconds
+- Offline mode: All content pre-downloaded
+
+### Offline Support
+- Sessions downloadable in advance
+- Audio coaching cached locally
+- Progress syncs when online
+- No internet required during session
+
+---
+
+## Safety Features
+
+### Safety Checks
+
+**Pre-Session:**
+- Mandatory buddy/lifeguard confirmation
+- Pool depth verification
+- Equipment check
+- Health status check
+
+**During Session:**
+- Pause reminder every 10 minutes
+- "Are you okay?" prompt if no interaction for 2 minutes
+- Emergency exit always accessible
+- Volume check every 5 minutes
+
+**Post-Session:**
+- Hydration reminder
+- Exit water safely reminder
+- Equipment cleanup checklist
+
+### Emergency Protocols
+
+```
+[Emergency Contact Setup]
+(Configured in settings)
+
+Primary Contact: [Name] [Phone]
+Secondary Contact: [Name] [Phone]
+
+Emergency Features:
+☑️ One-tap call to contact
+☑️ Send location via SMS
+☑️ Display pool address
+☑️ Show nearest emergency exit
+
+[Pool Information]
+Name: [Pool Name]
+Address: [Address]
+Emergency Phone: [Pool Office]
+AED Location: [Description]
+```
+
+---
+
+## Gamification Elements
+
+### Session Challenges
+
+```
+[Optional Challenges]
+(Presented before session)
+
+Today's Challenge:
+"🎯 Perfect Form Focus"
+Complete all reps with form reminders checked
+Reward: +50 bonus points
+
+Weekly Challenge:
+"🔥 5-Session Week"
+Practice 5 times this week
+Reward: Badge + 200 points
+
+Community Challenge:
+"🌊 Global Swim Week"
+Join 10,000+ swimmers worldwide
+Reward: Exclusive achievement
+```
+
+### Streaks & Consistency
+
+```
+[Streak Tracker]
+Current Streak: 🔥 3 days
+Longest Streak: 🏆 14 days
+
+Streak Rewards:
+- 3 days: +10 bonus points per session
+- 7 days: +25 bonus points per session
+- 14 days: +50 bonus points + badge
+- 30 days: +100 bonus points + special badge
+
+[Consistency Score]
+This Week: 85% ⭐⭐⭐⭐
+This Month: 75% ⭐⭐⭐
+
+(Based on recommended 3-4 sessions/week)
+```
+
+### Social Features
+
+```
+[Optional Sharing]
+After session completion:
+
+Share Your Achievement:
+"Just completed a 30-minute floating practice! 🏊"
+
+[Generated Image]
+- Session stats
+- Points earned
+- Streak info
+- Motivational quote
+
+Share to:
+- AquaCoach Community
+- Facebook
+- Instagram
+- Twitter
+- Private message
+
+[Privacy Options]
+☑️ Share stats only (no location)
+☐ Include pool location
+☐ Tag friends
+```
+
+---
+
+## Practice Session Analytics
+
+### Session History
+
+```
+[Practice History Screen]
+
+This Week: 3 sessions, 90 minutes
+Last 7 Days: 4 sessions, 120 minutes
+This Month: 12 sessions, 360 minutes
+
+[Calendar View]
+S  M  T  W  T  F  S
+   ✓     ✓  ✓
+✓        ✓  ✓
+      ✓
+
+[Session List]
+┌────────────────────────────────┐
+│ Today - Floating Skills        │
+│ 30 min • 100 pts • 4/4 drills │
+└────────────────────────────────┘
+
+┌────────────────────────────────┐
+│ 2 days ago - Breathing Practice│
+│ 25 min • 80 pts • 3/3 drills  │
+└────────────────────────────────┘
+
+┌────────────────────────────────┐
+│ 4 days ago - Float Routine     │
+│ 15 min • 50 pts • 2/2 drills  │
+└────────────────────────────────┘
+
+[View All →]
+```
+
+### Progress Tracking
+
+```
+[Skill Progress Dashboard]
+
+Floating Skills: ████████░░ 80%
+- Back Float: ██████████ 100% ✓
+- Front Float: ████████░░ 85%
+- Side Float: ████░░░░░░ 40%
+
+Breathing: ██████░░░░ 60%
+- Rhythmic Breathing: ████████░░ 75%
+- Underwater: ████░░░░░░ 45%
+
+Stroke Technique: ████░░░░░░ 35%
+- Freestyle: ████░░░░░░ 40%
+- Backstroke: ██░░░░░░░░ 20%
+
+[Detailed Breakdown →]
+```
+
+---
+
+## Session Customization
+
+### Session Builder
+
+```
+[Create Custom Session]
+
+Session Name: [Text input]
+"My Morning Routine"
+
+Duration: [Slider]
+◉───────────── 15 min
+    30 min
+    45 min
+    60 min
+
+[Add Drills]
+Search drills or browse categories:
+
+☑️ Wall-Assisted Back Float (5 min)
+   Reps: [5] Duration: [30s] Rest: [30s]
+
+☑️ Breathing Exercise (3 min)
+   Reps: [10] Duration: [15s] Rest: [15s]
+
+☐ Freestyle Stroke Practice (10 min)
+   [Add to session]
+
+[Drag to reorder]
+
+Warm-up: [Auto] [Custom] [None]
+Cool-down: [Auto] [Custom] [None]
+
+[Preview Session]
+[Save Session]
+```
+
+### Audio Preferences
+
+```
+[Audio Settings]
+
+Coaching Voice:
+○ Sarah (Encouraging, Female)
+○ Mike (Motivational, Male)
+● Alex (Neutral, Calm)
+
+Coaching Frequency:
+○ Minimal (Start/end only)
+● Standard (Key moments)
+○ Detailed (Frequent tips)
+
+Background Music:
+Toggle: ON [OFF]
+Volume: ◉─────────── 30%
+
+Countdown Beeps:
+Toggle: [ON] OFF
+○ Beep only
+● Beep + Voice
+
+Form Reminders:
+Toggle: [ON] OFF
+Frequency: Every [2] reps
+```
+
+---
+
+## Accessibility Features
+
+### Visual Accommodations
+- High contrast mode
+- Large text option (up to 24pt)
+- Color blind friendly indicators
+- Haptic feedback for timers
+- Reduced motion option
+
+### Audio Accommodations
+- Adjustable voice speed (0.5x - 2x)
+- Text-to-speech for all instructions
+- Visual-only mode (no audio required)
+- Closed captions for coaching
+- Custom alert tones
+
+### Physical Accommodations
+- One-handed mode
+- Voice commands (start/pause/skip)
+- Extended touch targets
+- Simplified interface option
+- Auto-advance mode (no taps required)
+
+---
+
+## Future Enhancements - Practice Mode
+
+### Phase 2
+- Real-time form feedback via phone camera
+- Heart rate zone tracking
+- Lap counter integration
+- Pool depth auto-detection via sensors
+- Multi-user sessions (group workouts)
+
+### Phase 3
+- Underwater audio via bone conduction
+- AR form overlay
+- AI coach with computer vision
+- Smart watch integration
+- Competition mode (race against others)
+- Virtual coach video calls during session
