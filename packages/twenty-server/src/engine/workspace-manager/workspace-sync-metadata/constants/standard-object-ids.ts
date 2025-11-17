@@ -36,6 +36,8 @@ export const STANDARD_OBJECT_IDS = {
   person: '20202020-e674-48e5-a542-72570eee7213',
   task: '20202020-1ba1-48ba-bc83-ef7e5990ed10',
   taskTarget: '20202020-5a9a-44e8-95df-771cd06d0fb1',
+  testimonial: '20202020-8c4f-4d5e-9a1b-2e3f4a5b6c7d',
+  testimonialTarget: '20202020-9d5e-4e6f-9b2c-3f4a5b6c7d8e',
   timelineActivity: '20202020-6736-4337-b5c4-8b39fae325a5',
   viewField: '20202020-4d19-4655-95bf-b2a04cf206d4',
   viewGroup: '20202020-725f-47a4-8008-4255f9519f70',

@@ -42,6 +42,7 @@ import { MessageParticipantWorkspaceEntity } from 'src/modules/messaging/common/
 import { NoteTargetWorkspaceEntity } from 'src/modules/note/standard-objects/note-target.workspace-entity';
 import { OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
 import { TaskTargetWorkspaceEntity } from 'src/modules/task/standard-objects/task-target.workspace-entity';
+import { TestimonialTargetWorkspaceEntity } from 'src/modules/testimonial/standard-objects/testimonial-target.workspace-entity';
 import { TimelineActivityWorkspaceEntity } from 'src/modules/timeline/standard-objects/timeline-activity.workspace-entity';
 
 const NAME_FIELD_NAME = 'name';
@@ -241,6 +242,18 @@ export class PersonWorkspaceEntity extends BaseWorkspaceEntity {
   })
   @WorkspaceIsFieldUIReadOnly()
   noteTargets: Relation<NoteTargetWorkspaceEntity[]>;
+
+  @WorkspaceRelation({
+    standardId: PERSON_STANDARD_FIELD_IDS.testimonialTargets,
+    type: RelationType.ONE_TO_MANY,
+    label: msg`Testimonials`,
+    description: msg`Testimonials tied to the contact`,
+    icon: 'IconStar',
+    inverseSideTarget: () => TestimonialTargetWorkspaceEntity,
+    onDelete: RelationOnDeleteAction.CASCADE,
+  })
+  @WorkspaceIsFieldUIReadOnly()
+  testimonialTargets: Relation<TestimonialTargetWorkspaceEntity[]>;
 
   @WorkspaceRelation({
     standardId: PERSON_STANDARD_FIELD_IDS.favorites,

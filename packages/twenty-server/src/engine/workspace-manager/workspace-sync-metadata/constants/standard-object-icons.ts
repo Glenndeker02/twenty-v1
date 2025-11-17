@@ -28,6 +28,8 @@ export const STANDARD_OBJECT_ICONS = {
   person: 'IconUser',
   task: 'IconCheckbox',
   taskTarget: 'IconCheckbox',
+  testimonial: 'IconStar',
+  testimonialTarget: 'IconTarget',
   timelineActivity: 'IconTimelineEvent',
   viewField: 'IconTag',
   viewGroup: 'IconTag',

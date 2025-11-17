@@ -27,6 +27,7 @@ import { AttachmentWorkspaceEntity } from 'src/modules/attachment/standard-objec
 import { FavoriteWorkspaceEntity } from 'src/modules/favorite/standard-objects/favorite.workspace-entity';
 import { NoteTargetWorkspaceEntity } from 'src/modules/note/standard-objects/note-target.workspace-entity';
 import { TaskTargetWorkspaceEntity } from 'src/modules/task/standard-objects/task-target.workspace-entity';
+import { TestimonialTargetWorkspaceEntity } from 'src/modules/testimonial/standard-objects/testimonial-target.workspace-entity';
 import { TimelineActivityWorkspaceEntity } from 'src/modules/timeline/standard-objects/timeline-activity.workspace-entity';
 
 export const SEARCH_FIELDS_FOR_CUSTOM_OBJECT: FieldTypeAndNameMetadata[] = [
@@ -99,6 +100,22 @@ export class CustomWorkspaceEntity extends BaseWorkspaceEntity {
   })
   @WorkspaceIsNullable()
   taskTargets: TaskTargetWorkspaceEntity[];
+
+  @WorkspaceRelation({
+    standardId: CUSTOM_OBJECT_STANDARD_FIELD_IDS.testimonialTargets,
+    label: msg`Testimonials`,
+    type: RelationType.ONE_TO_MANY,
+    description: (objectMetadata) => {
+      const label = objectMetadata.labelSingular;
+
+      return msg`Testimonials tied to the ${label}`;
+    },
+    icon: 'IconStar',
+    inverseSideTarget: () => TestimonialTargetWorkspaceEntity,
+    onDelete: RelationOnDeleteAction.CASCADE,
+  })
+  @WorkspaceIsNullable()
+  testimonialTargets: TestimonialTargetWorkspaceEntity[];
 
   @WorkspaceRelation({
     standardId: CUSTOM_OBJECT_STANDARD_FIELD_IDS.favorites,
