@@ -43,6 +43,8 @@ import { NoteTargetWorkspaceEntity } from 'src/modules/note/standard-objects/not
 import { OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
 import { TaskTargetWorkspaceEntity } from 'src/modules/task/standard-objects/task-target.workspace-entity';
 import { TimelineActivityWorkspaceEntity } from 'src/modules/timeline/standard-objects/timeline-activity.workspace-entity';
+import { LiveSessionInteractionWorkspaceEntity } from 'src/modules/live-sales-agent/standard-objects/live-session-interaction.workspace-entity';
+import { LiveSessionLeadWorkspaceEntity } from 'src/modules/live-sales-agent/standard-objects/live-session-lead.workspace-entity';
 
 const NAME_FIELD_NAME = 'name';
 const EMAILS_FIELD_NAME = 'emails';
@@ -305,6 +307,32 @@ export class PersonWorkspaceEntity extends BaseWorkspaceEntity {
   @WorkspaceIsNullable()
   @WorkspaceIsSystem()
   timelineActivities: Relation<TimelineActivityWorkspaceEntity[]>;
+
+  @WorkspaceRelation({
+    standardId: PERSON_STANDARD_FIELD_IDS.liveSessionInteractions,
+    type: RelationType.ONE_TO_MANY,
+    label: msg`Live Session Interactions`,
+    description: msg`Live session interactions for this person`,
+    icon: 'IconMessageDots',
+    inverseSideTarget: () => LiveSessionInteractionWorkspaceEntity,
+    inverseSideFieldKey: 'person',
+    onDelete: RelationOnDeleteAction.SET_NULL,
+  })
+  @WorkspaceIsSystem()
+  liveSessionInteractions: Relation<LiveSessionInteractionWorkspaceEntity[]>;
+
+  @WorkspaceRelation({
+    standardId: PERSON_STANDARD_FIELD_IDS.liveSessionLeads,
+    type: RelationType.ONE_TO_MANY,
+    label: msg`Live Session Leads`,
+    description: msg`Live session leads for this person`,
+    icon: 'IconUserPlus',
+    inverseSideTarget: () => LiveSessionLeadWorkspaceEntity,
+    inverseSideFieldKey: 'person',
+    onDelete: RelationOnDeleteAction.SET_NULL,
+  })
+  @WorkspaceIsSystem()
+  liveSessionLeads: Relation<LiveSessionLeadWorkspaceEntity[]>;
 
   @WorkspaceField({
     standardId: PERSON_STANDARD_FIELD_IDS.searchVector,

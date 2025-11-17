@@ -41,4 +41,10 @@ export const STANDARD_OBJECT_ICONS = {
   workflowVersion: 'IconVersions',
   workflowAutomatedTrigger: 'IconSettingsAutomation',
   workspaceMember: 'IconUserCircle',
+  // Live Sales Agent Objects
+  product: 'IconShoppingCart',
+  liveSession: 'IconVideo',
+  liveSessionProduct: 'IconShoppingBag',
+  liveSessionInteraction: 'IconMessageDots',
+  liveSessionLead: 'IconUserPlus',
 } as const;

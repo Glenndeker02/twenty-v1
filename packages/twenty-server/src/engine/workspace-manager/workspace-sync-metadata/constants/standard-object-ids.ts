@@ -49,4 +49,10 @@ export const STANDARD_OBJECT_IDS = {
   workflowVersion: '20202020-d65d-4ab9-9344-d77bfb376a3d',
   workspaceMember: '20202020-3319-4234-a34c-82d5c0e881a6',
   workflowAutomatedTrigger: '20202020-3319-4234-a34c-7f3b9d2e4d1f',
+  // Live Sales Agent Objects
+  product: '20202020-1a2b-4c5d-8e9f-1a2b3c4d5e6f',
+  liveSession: '20202020-2b3c-4d5e-9f1a-2b3c4d5e6f7a',
+  liveSessionProduct: '20202020-3c4d-5e6f-1a2b-3c4d5e6f7a8b',
+  liveSessionInteraction: '20202020-4d5e-6f7a-2b3c-4d5e6f7a8b9c',
+  liveSessionLead: '20202020-5e6f-7a8b-3c4d-5e6f7a8b9c0d',
 } as const;
