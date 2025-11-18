@@ -15,6 +15,7 @@ import { GoogleAuthController } from 'src/engine/core-modules/auth/controllers/g
 import { MicrosoftAPIsAuthController } from 'src/engine/core-modules/auth/controllers/microsoft-apis-auth.controller';
 import { MicrosoftAuthController } from 'src/engine/core-modules/auth/controllers/microsoft-auth.controller';
 import { SSOAuthController } from 'src/engine/core-modules/auth/controllers/sso-auth.controller';
+import { WhopAuthController } from 'src/engine/core-modules/auth/controllers/whop-auth.controller';
 import { AuthSsoService } from 'src/engine/core-modules/auth/services/auth-sso.service';
 import { CreateCalendarChannelService } from 'src/engine/core-modules/auth/services/create-calendar-channel.service';
 import { CreateConnectedAccountService } from 'src/engine/core-modules/auth/services/create-connected-account.service';
@@ -22,6 +23,7 @@ import { CreateMessageChannelService } from 'src/engine/core-modules/auth/servic
 import { GoogleAPIScopesService } from 'src/engine/core-modules/auth/services/google-apis-scopes';
 import { GoogleAPIsService } from 'src/engine/core-modules/auth/services/google-apis.service';
 import { MicrosoftAPIsService } from 'src/engine/core-modules/auth/services/microsoft-apis.service';
+import { WhopService } from 'src/engine/core-modules/auth/services/whop.service';
 import { ResetCalendarChannelService } from 'src/engine/core-modules/auth/services/reset-calendar-channel.service';
 import { ResetMessageChannelService } from 'src/engine/core-modules/auth/services/reset-message-channel.service';
 import { ResetMessageFolderService } from 'src/engine/core-modules/auth/services/reset-message-folder.service';
@@ -122,6 +124,7 @@ import { JwtAuthStrategy } from './strategies/jwt.auth.strategy';
     GoogleAPIsAuthController,
     MicrosoftAPIsAuthController,
     SSOAuthController,
+    WhopAuthController,
   ],
   providers: [
     SignInUpService,
@@ -132,6 +135,7 @@ import { JwtAuthStrategy } from './strategies/jwt.auth.strategy';
     GoogleAPIsService,
     GoogleAPIScopesService,
     MicrosoftAPIsService,
+    WhopService,
     AppTokenService,
     AccessTokenService,
     RefreshTokenService,
