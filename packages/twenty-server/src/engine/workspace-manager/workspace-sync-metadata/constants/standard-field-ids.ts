@@ -365,6 +365,8 @@ export const PERSON_STANDARD_FIELD_IDS = {
   messageParticipants: '20202020-498e-4c61-8158-fa04f0638334',
   calendarEventParticipants: '20202020-52ee-45e9-a702-b64b3753e3a9',
   timelineActivities: '20202020-a43e-4873-9c23-e522de906ce5',
+  liveSessionInteractions: '20202020-2c3d-4e5f-6a7b-8c9d0e1f2a3b',
+  liveSessionLeads: '20202020-3d4e-5f6a-7b8c-9d0e1f2a3b4c',
   searchVector: '57d1d7ad-fa10-44fc-82f3-ad0959ec2534',
 } as const;
 
@@ -563,6 +565,79 @@ export const DASHBOARD_STANDARD_FIELD_IDS = {
   searchVector: '20202020-0bcc-47a4-8360-2e35a7133f7a',
 } as const;
 
+// Live Sales Agent Field IDs
+export const PRODUCT_STANDARD_FIELD_IDS = {
+  name: '20202020-6a7b-8c9d-0e1f-2a3b4c5d6e7f',
+  description: '20202020-7b8c-9d0e-1f2a-3b4c5d6e7f8a',
+  price: '20202020-8c9d-0e1f-2a3b-4c5d6e7f8a9b',
+  imageUrl: '20202020-9d0e-1f2a-3b4c-5d6e7f8a9b0c',
+  sku: '20202020-0e1f-2a3b-4c5d-6e7f8a9b0c1d',
+  isActive: '20202020-1f2a-3b4c-5d6e-7f8a9b0c1d2e',
+  category: '20202020-2a3b-4c5d-6e7f-8a9b0c1d2e3f',
+  purchaseLink: '20202020-3b4c-5d6e-7f8a-9b0c1d2e3f4a',
+  position: '20202020-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  createdBy: '20202020-5d6e-7f8a-9b0c-1d2e3f4a5b6c',
+  liveSessionProducts: '20202020-6e7f-8a9b-0c1d-2e3f4a5b6c7d',
+  liveSessionLeads: '20202020-4e5f-6a7b-8c9d-0e1f2a3b4c5d',
+  searchVector: '20202020-7f8a-9b0c-1d2e-3f4a5b6c7d8e',
+} as const;
+
+export const LIVE_SESSION_STANDARD_FIELD_IDS = {
+  platform: '20202020-8a9b-0c1d-2e3f-4a5b6c7d8e9f',
+  platformStreamId: '20202020-9b0c-1d2e-3f4a-5b6c7d8e9f0a',
+  status: '20202020-0c1d-2e3f-4a5b-6c7d8e9f0a1b',
+  startTime: '20202020-1d2e-3f4a-5b6c-7d8e9f0a1b2c',
+  endTime: '20202020-2e3f-4a5b-6c7d-8e9f0a1b2c3d',
+  title: '20202020-3f4a-5b6c-7d8e-9f0a1b2c3d4e',
+  totalViewers: '20202020-4a5b-6c7d-8e9f-0a1b2c3d4e5f',
+  peakViewers: '20202020-5b6c-7d8e-9f0a-1b2c3d4e5f6a',
+  agentEnabled: '20202020-6c7d-8e9f-0a1b-2c3d4e5f6a7b',
+  position: '20202020-7d8e-9f0a-1b2c-3d4e5f6a7b8c',
+  createdBy: '20202020-8e9f-0a1b-2c3d-4e5f6a7b8c9d',
+  liveSessionProducts: '20202020-9f0a-1b2c-3d4e-5f6a7b8c9d0e',
+  liveSessionInteractions: '20202020-0a1b-2c3d-4e5f-6a7b8c9d0e1f',
+  liveSessionLeads: '20202020-1b2c-3d4e-5f6a-7b8c9d0e1f2a',
+} as const;
+
+export const LIVE_SESSION_PRODUCT_STANDARD_FIELD_IDS = {
+  liveSession: '20202020-2c3d-4e5f-6a7b-8c9d0e1f2a3b',
+  liveSessionId: '20202020-3d4e-5f6a-7b8c-9d0e1f2a3b4c',
+  product: '20202020-4e5f-6a7b-8c9d-0e1f2a3b4c5d',
+  productId: '20202020-5f6a-7b8c-9d0e-1f2a3b4c5d6e',
+  mentionCount: '20202020-6a7b-8c9d-0e1f-2a3b4c5d6e7f',
+  linkClickCount: '20202020-7b8c-9d0e-1f2a-3b4c5d6e7f8a',
+  conversionCount: '20202020-8c9d-0e1f-2a3b-4c5d6e7f8a9b',
+  position: '20202020-9d0e-1f2a-3b4c-5d6e7f8a9b0c',
+} as const;
+
+export const LIVE_SESSION_INTERACTION_STANDARD_FIELD_IDS = {
+  liveSession: '20202020-0e1f-2a3b-4c5d-6e7f8a9b0c1d',
+  liveSessionId: '20202020-1f2a-3b4c-5d6e-7f8a9b0c1d2e',
+  person: '20202020-2a3b-4c5d-6e7f-8a9b0c1d2e3f',
+  personId: '20202020-3b4c-5d6e-7f8a-9b0c1d2e3f4a',
+  platformUsername: '20202020-4c5d-6e7f-8a9b-0c1d2e3f4a5b',
+  userMessage: '20202020-5d6e-7f8a-9b0c-1d2e3f4a5b6c',
+  agentResponse: '20202020-6e7f-8a9b-0c1d-2e3f4a5b6c7d',
+  intent: '20202020-7f8a-9b0c-1d2e-3f4a5b6c7d8e',
+  wasAutoResponded: '20202020-8a9b-0c1d-2e3f-4a5b6c7d8e9f',
+  responseTimestamp: '20202020-9b0c-1d2e-3f4a-5b6c7d8e9f0a',
+  position: '20202020-0c1d-2e3f-4a5b-6c7d8e9f0a1b',
+} as const;
+
+export const LIVE_SESSION_LEAD_STANDARD_FIELD_IDS = {
+  liveSession: '20202020-1d2e-3f4a-5b6c-7d8e9f0a1b2c',
+  liveSessionId: '20202020-2e3f-4a5b-6c7d-8e9f0a1b2c3d',
+  person: '20202020-3f4a-5b6c-7d8e-9f0a1b2c3d4e',
+  personId: '20202020-4a5b-6c7d-8e9f-0a1b2c3d4e5f',
+  product: '20202020-5b6c-7d8e-9f0a-1b2c3d4e5f6a',
+  productId: '20202020-6c7d-8e9f-0a1b-2c3d4e5f6a7b',
+  leadScore: '20202020-7d8e-9f0a-1b2c-3d4e5f6a7b8c',
+  leadStatus: '20202020-8e9f-0a1b-2c3d-4e5f6a7b8c9d',
+  notes: '20202020-9f0a-1b2c-3d4e-5f6a7b8c9d0e',
+  capturedAt: '20202020-0a1b-2c3d-4e5f-6a7b8c9d0e1f',
+  position: '20202020-1b2c-3d4e-5f6a-7b8c9d0e1f2a',
+} as const;
+
 export const STANDARD_OBJECT_FIELD_IDS = {
   activityTarget: ACTIVITY_TARGET_STANDARD_FIELD_IDS,
   activity: ACTIVITY_STANDARD_FIELD_IDS,
@@ -603,4 +678,10 @@ export const STANDARD_OBJECT_FIELD_IDS = {
   workflowRun: WORKFLOW_RUN_STANDARD_FIELD_IDS,
   workflowVersion: WORKFLOW_VERSION_STANDARD_FIELD_IDS,
   workspaceMember: WORKSPACE_MEMBER_STANDARD_FIELD_IDS,
+  // Live Sales Agent Objects
+  product: PRODUCT_STANDARD_FIELD_IDS,
+  liveSession: LIVE_SESSION_STANDARD_FIELD_IDS,
+  liveSessionProduct: LIVE_SESSION_PRODUCT_STANDARD_FIELD_IDS,
+  liveSessionInteraction: LIVE_SESSION_INTERACTION_STANDARD_FIELD_IDS,
+  liveSessionLead: LIVE_SESSION_LEAD_STANDARD_FIELD_IDS,
 } as const;
