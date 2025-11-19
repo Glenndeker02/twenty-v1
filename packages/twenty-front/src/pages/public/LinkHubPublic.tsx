@@ -1,6 +1,7 @@
 import { useLingui } from '@lingui/react/macro';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { REACT_APP_SERVER_BASE_URL } from '~/config';
 
 export const LinkHubPublic = () => {
   const { t } = useLingui();
@@ -12,7 +13,7 @@ export const LinkHubPublic = () => {
   useEffect(() => {
     const fetchLinkHub = async () => {
       try {
-        const response = await fetch(`/links/${slug}`);
+        const response = await fetch(`${REACT_APP_SERVER_BASE_URL}/links/${slug}`);
         if (!response.ok) {
           throw new Error('Link hub not found');
         }
@@ -30,7 +31,7 @@ export const LinkHubPublic = () => {
 
   const handleLinkClick = async (itemId: string) => {
     try {
-      await fetch(`/links/${slug}/click/${itemId}`, { method: 'POST' });
+      await fetch(`${REACT_APP_SERVER_BASE_URL}/links/${slug}/click/${itemId}`, { method: 'POST' });
     } catch (err) {
       console.error('Failed to track click:', err);
     }

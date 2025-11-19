@@ -1,6 +1,7 @@
 import { useLingui } from '@lingui/react/macro';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { REACT_APP_SERVER_BASE_URL } from '~/config';
 
 export const FormPublic = () => {
   const { t } = useLingui();
@@ -16,7 +17,7 @@ export const FormPublic = () => {
   useEffect(() => {
     const fetchForm = async () => {
       try {
-        const response = await fetch(`/forms/${token}`);
+        const response = await fetch(`${REACT_APP_SERVER_BASE_URL}/forms/${token}`);
         if (!response.ok) {
           throw new Error('Form not found');
         }
@@ -55,7 +56,7 @@ export const FormPublic = () => {
     }
 
     try {
-      const response = await fetch(`/forms/${token}/submit`, {
+      const response = await fetch(`${REACT_APP_SERVER_BASE_URL}/forms/${token}/submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: formData }),
