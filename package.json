@@ -224,6 +224,7 @@
     "packages": [
       "packages/twenty-front",
       "packages/twenty-server",
+      "packages/twenty-mobile",
       "packages/twenty-emails",
       "packages/twenty-ui",
       "packages/twenty-utils",
