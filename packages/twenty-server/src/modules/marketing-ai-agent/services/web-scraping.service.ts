@@ -5,7 +5,7 @@ import { generateText } from 'ai';
 import { AiModelRegistryService } from 'src/engine/core-modules/ai/services/ai-model-registry.service';
 import { AIBillingService } from 'src/engine/core-modules/ai/services/ai-billing.service';
 import { AI_TELEMETRY_CONFIG } from 'src/engine/core-modules/ai/constants/ai-telemetry.const';
-import { TwentyORMManager } from 'src/engine/twenty-orm/twenty-orm.manager';
+import { TwentyORMGlobalManager } from 'src/engine/twenty-orm/twenty-orm.manager';
 import { TrendingTopicWorkspaceEntity } from 'src/modules/marketing-ai-agent/standard-objects/trending-topic.workspace-entity';
 import { ProspectLeadWorkspaceEntity } from 'src/modules/marketing-ai-agent/standard-objects/prospect-lead.workspace-entity';
 
@@ -34,7 +34,7 @@ export class WebScrapingService {
   constructor(
     private readonly aiModelRegistryService: AiModelRegistryService,
     private readonly aiBillingService: AIBillingService,
-    private readonly twentyORMManager: TwentyORMManager,
+    private readonly twentyORMGlobalManager: TwentyORMGlobalManager,
   ) {}
 
   /**
@@ -315,7 +315,7 @@ Provide:
     topics: TrendingTopicData[],
   ): Promise<void> {
     const repository =
-      await this.twentyORMManager.getRepository<TrendingTopicWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepository<TrendingTopicWorkspaceEntity>(
         'trendingTopic',
       );
 
@@ -345,7 +345,7 @@ Provide:
     campaignId?: string,
   ): Promise<void> {
     const repository =
-      await this.twentyORMManager.getRepository<ProspectLeadWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepository<ProspectLeadWorkspaceEntity>(
         'prospectLead',
       );
 

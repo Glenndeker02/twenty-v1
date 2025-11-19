@@ -8,7 +8,7 @@ import { MessageQueueService } from 'src/engine/core-modules/message-queue/servi
 import { Process } from 'src/engine/core-modules/message-queue/decorators/process.decorator';
 import { Processor } from 'src/engine/core-modules/message-queue/decorators/processor.decorator';
 import { WorkspaceEntity } from 'src/engine/core-modules/workspace/workspace.entity';
-import { TwentyORMManager } from 'src/engine/twenty-orm/twenty-orm.manager';
+import { TwentyORMGlobalManager } from 'src/engine/twenty-orm/twenty-orm.manager';
 import { MarketingCampaignWorkspaceEntity } from 'src/modules/marketing-ai-agent/standard-objects/marketing-campaign.workspace-entity';
 import { WebScrapingService } from 'src/modules/marketing-ai-agent/services/web-scraping.service';
 
@@ -27,7 +27,7 @@ export class TrendingTopicsScraperJob {
 
   constructor(
     private readonly webScrapingService: WebScrapingService,
-    private readonly twentyORMManager: TwentyORMManager,
+    private readonly twentyORMGlobalManager: TwentyORMGlobalManager,
     private readonly messageQueueService: MessageQueueService,
     @InjectRepository(WorkspaceEntity)
     private readonly workspaceRepository: Repository<WorkspaceEntity>,
@@ -53,7 +53,7 @@ export class TrendingTopicsScraperJob {
 
       // Get active campaigns to determine relevant categories and keywords
       const campaignRepository =
-        await this.twentyORMManager.getRepository<MarketingCampaignWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepository<MarketingCampaignWorkspaceEntity>(
           'marketingCampaign',
         );
 

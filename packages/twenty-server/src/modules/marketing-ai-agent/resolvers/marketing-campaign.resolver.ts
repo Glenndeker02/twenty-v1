@@ -4,7 +4,7 @@ import { Injectable, UseGuards } from '@nestjs/common';
 import { Workspace } from 'src/engine/core-modules/workspace/workspace.entity';
 import { AuthWorkspace } from 'src/engine/decorators/auth/auth-workspace.decorator';
 import { JwtAuthGuard } from 'src/engine/guards/jwt.auth.guard';
-import { TwentyORMManager } from 'src/engine/twenty-orm/twenty-orm.manager';
+import { TwentyORMGlobalManager } from 'src/engine/twenty-orm/twenty-orm.manager';
 import { MarketingCampaignWorkspaceEntity } from 'src/modules/marketing-ai-agent/standard-objects/marketing-campaign.workspace-entity';
 import { MarketingAiAgentService } from 'src/modules/marketing-ai-agent/services/marketing-ai-agent.service';
 import { TrendingTopicsScraperJob } from 'src/modules/marketing-ai-agent/jobs/trending-topics-scraper.job';
@@ -15,7 +15,7 @@ import { OutreachAutomationJob } from 'src/modules/marketing-ai-agent/jobs/outre
 @Resolver()
 export class MarketingCampaignResolver {
   constructor(
-    private readonly twentyORMManager: TwentyORMManager,
+    private readonly twentyORMGlobalManager: TwentyORMGlobalManager,
     private readonly marketingAiAgentService: MarketingAiAgentService,
     private readonly trendingTopicsScraperJob: TrendingTopicsScraperJob,
     private readonly leadDiscoveryJob: LeadDiscoveryJob,
@@ -149,7 +149,7 @@ export class MarketingCampaignResolver {
     @Args('campaignId') campaignId: string,
   ): Promise<boolean> {
     const campaignRepository =
-      await this.twentyORMManager.getRepository<MarketingCampaignWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepository<MarketingCampaignWorkspaceEntity>(
         'marketingCampaign',
       );
 
@@ -175,7 +175,7 @@ export class MarketingCampaignResolver {
     @Args('campaignId') campaignId: string,
   ): Promise<boolean> {
     const campaignRepository =
-      await this.twentyORMManager.getRepository<MarketingCampaignWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepository<MarketingCampaignWorkspaceEntity>(
         'marketingCampaign',
       );
 

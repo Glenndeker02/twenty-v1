@@ -5,6 +5,7 @@ import { AgentEntity } from 'src/engine/metadata-modules/agent/agent.entity';
 import { WorkspaceEntity } from 'src/engine/core-modules/workspace/workspace.entity';
 import { AiCoreModule } from 'src/engine/core-modules/ai/ai-core.module';
 import { MessageQueueModule } from 'src/engine/core-modules/message-queue/message-queue.module';
+import { ObjectMetadataRepositoryModule } from 'src/engine/object-metadata-repository/object-metadata-repository.module';
 import { TwentyORMModule } from 'src/engine/twenty-orm/twenty-orm.module';
 
 // Services
@@ -33,7 +34,9 @@ import { OutreachMessageWorkspaceEntity } from 'src/modules/marketing-ai-agent/s
     // Import core modules
     AiCoreModule,
     MessageQueueModule,
-    TwentyORMModule.register([
+    TwentyORMModule,
+    // Import workspace entities via ObjectMetadataRepositoryModule
+    ObjectMetadataRepositoryModule.forFeature([
       MarketingCampaignWorkspaceEntity,
       TrendingTopicWorkspaceEntity,
       ProspectLeadWorkspaceEntity,

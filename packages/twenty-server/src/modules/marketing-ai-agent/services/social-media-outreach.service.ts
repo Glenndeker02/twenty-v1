@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 
-import { TwentyORMManager } from 'src/engine/twenty-orm/twenty-orm.manager';
+import { TwentyORMGlobalManager } from 'src/engine/twenty-orm/twenty-orm.manager';
 import { OutreachMessageWorkspaceEntity } from 'src/modules/marketing-ai-agent/standard-objects/outreach-message.workspace-entity';
 import { ProspectLeadWorkspaceEntity } from 'src/modules/marketing-ai-agent/standard-objects/prospect-lead.workspace-entity';
 
@@ -15,7 +15,7 @@ export type SendMessageResult = {
 export class SocialMediaOutreachService {
   private readonly logger = new Logger(SocialMediaOutreachService.name);
 
-  constructor(private readonly twentyORMManager: TwentyORMManager) {}
+  constructor(private readonly twentyORMGlobalManager: TwentyORMGlobalManager) {}
 
   /**
    * Send an outreach message via specified platform
@@ -28,7 +28,7 @@ export class SocialMediaOutreachService {
     this.logger.log(`Sending outreach message ${outreachMessageId}`);
 
     const messageRepository =
-      await this.twentyORMManager.getRepository<OutreachMessageWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepository<OutreachMessageWorkspaceEntity>(
         'outreachMessage',
       );
 
@@ -118,7 +118,7 @@ export class SocialMediaOutreachService {
     );
 
     const messageRepository =
-      await this.twentyORMManager.getRepository<OutreachMessageWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepository<OutreachMessageWorkspaceEntity>(
         'outreachMessage',
       );
 
@@ -175,7 +175,7 @@ export class SocialMediaOutreachService {
     this.logger.log(`Tracking ${eventType} event for message ${messageId}`);
 
     const messageRepository =
-      await this.twentyORMManager.getRepository<OutreachMessageWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepository<OutreachMessageWorkspaceEntity>(
         'outreachMessage',
       );
 
@@ -206,7 +206,7 @@ export class SocialMediaOutreachService {
 
       if (message?.leadId) {
         const leadRepository =
-          await this.twentyORMManager.getRepository<ProspectLeadWorkspaceEntity>(
+          await this.twentyORMGlobalManager.getRepository<ProspectLeadWorkspaceEntity>(
             'prospectLead',
           );
 
