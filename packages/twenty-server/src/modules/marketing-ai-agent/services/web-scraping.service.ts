@@ -315,7 +315,8 @@ Provide:
     topics: TrendingTopicData[],
   ): Promise<void> {
     const repository =
-      await this.twentyORMGlobalManager.getRepository<TrendingTopicWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<TrendingTopicWorkspaceEntity>(
+        workspaceId,
         'trendingTopic',
       );
 
@@ -345,7 +346,8 @@ Provide:
     campaignId?: string,
   ): Promise<void> {
     const repository =
-      await this.twentyORMGlobalManager.getRepository<ProspectLeadWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<ProspectLeadWorkspaceEntity>(
+        workspaceId,
         'prospectLead',
       );
 

@@ -82,7 +82,8 @@ export class CrmInsightsService {
     );
 
     const personRepository =
-      await this.twentyORMGlobalManager.getRepository<PersonWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<PersonWorkspaceEntity>(
+        workspaceId,
         'person',
       );
 
@@ -100,7 +101,8 @@ export class CrmInsightsService {
 
     if ((person as any).companyId) {
       const companyRepository =
-        await this.twentyORMGlobalManager.getRepository<CompanyWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepositoryForWorkspace<CompanyWorkspaceEntity>(
+          workspaceId,
           'company',
         );
       company = await companyRepository.findOne({
@@ -133,7 +135,8 @@ export class CrmInsightsService {
     );
 
     const companyRepository =
-      await this.twentyORMGlobalManager.getRepository<CompanyWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<CompanyWorkspaceEntity>(
+        workspaceId,
         'company',
       );
 
@@ -147,7 +150,8 @@ export class CrmInsightsService {
 
     // Get opportunities for this company
     const opportunityRepository =
-      await this.twentyORMGlobalManager.getRepository<OpportunityWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<OpportunityWorkspaceEntity>(
+        workspaceId,
         'opportunity',
       );
 
@@ -174,7 +178,8 @@ export class CrmInsightsService {
   private async getTotalCustomers(workspaceId: string): Promise<number> {
     try {
       const personRepository =
-        await this.twentyORMGlobalManager.getRepository<PersonWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepositoryForWorkspace<PersonWorkspaceEntity>(
+          workspaceId,
           'person',
         );
 
@@ -190,7 +195,8 @@ export class CrmInsightsService {
   private async getTotalCompanies(workspaceId: string): Promise<number> {
     try {
       const companyRepository =
-        await this.twentyORMGlobalManager.getRepository<CompanyWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepositoryForWorkspace<CompanyWorkspaceEntity>(
+          workspaceId,
           'company',
         );
 
@@ -206,7 +212,8 @@ export class CrmInsightsService {
   private async getTotalOpportunities(workspaceId: string): Promise<number> {
     try {
       const opportunityRepository =
-        await this.twentyORMGlobalManager.getRepository<OpportunityWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepositoryForWorkspace<OpportunityWorkspaceEntity>(
+          workspaceId,
           'opportunity',
         );
 
@@ -233,7 +240,8 @@ export class CrmInsightsService {
   private async getTopCompanies(workspaceId: string): Promise<string[]> {
     try {
       const companyRepository =
-        await this.twentyORMGlobalManager.getRepository<CompanyWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepositoryForWorkspace<CompanyWorkspaceEntity>(
+          workspaceId,
           'company',
         );
 
@@ -256,7 +264,8 @@ export class CrmInsightsService {
   ): Promise<number> {
     try {
       const opportunityRepository =
-        await this.twentyORMGlobalManager.getRepository<OpportunityWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepositoryForWorkspace<OpportunityWorkspaceEntity>(
+          workspaceId,
           'opportunity',
         );
 

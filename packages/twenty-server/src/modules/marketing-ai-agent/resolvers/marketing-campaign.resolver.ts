@@ -149,7 +149,8 @@ export class MarketingCampaignResolver {
     @Args('campaignId') campaignId: string,
   ): Promise<boolean> {
     const campaignRepository =
-      await this.twentyORMGlobalManager.getRepository<MarketingCampaignWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<MarketingCampaignWorkspaceEntity>(
+        workspace.id,
         'marketingCampaign',
       );
 
@@ -175,7 +176,8 @@ export class MarketingCampaignResolver {
     @Args('campaignId') campaignId: string,
   ): Promise<boolean> {
     const campaignRepository =
-      await this.twentyORMGlobalManager.getRepository<MarketingCampaignWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<MarketingCampaignWorkspaceEntity>(
+        workspace.id,
         'marketingCampaign',
       );
 

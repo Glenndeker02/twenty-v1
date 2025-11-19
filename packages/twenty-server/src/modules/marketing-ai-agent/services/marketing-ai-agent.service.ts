@@ -55,7 +55,8 @@ export class MarketingAiAgentService {
 
     // Get trending topics
     const trendingTopicRepository =
-      await this.twentyORMGlobalManager.getRepository<TrendingTopicWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<TrendingTopicWorkspaceEntity>(
+        workspaceId,
         'trendingTopic',
       );
     const trendingTopics = await trendingTopicRepository.find({
@@ -66,7 +67,8 @@ export class MarketingAiAgentService {
 
     // Get campaign details
     const campaignRepository =
-      await this.twentyORMGlobalManager.getRepository<MarketingCampaignWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<MarketingCampaignWorkspaceEntity>(
+        workspaceId,
         'marketingCampaign',
       );
     const campaign = await campaignRepository.findOne({
@@ -134,7 +136,8 @@ export class MarketingAiAgentService {
 
     // Get prospect lead details
     const leadRepository =
-      await this.twentyORMGlobalManager.getRepository<ProspectLeadWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<ProspectLeadWorkspaceEntity>(
+        workspaceId,
         'prospectLead',
       );
     const lead = await leadRepository.findOne({
@@ -202,7 +205,8 @@ export class MarketingAiAgentService {
 
     // Get prospect lead details
     const leadRepository =
-      await this.twentyORMGlobalManager.getRepository<ProspectLeadWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<ProspectLeadWorkspaceEntity>(
+        workspaceId,
         'prospectLead',
       );
     const lead = await leadRepository.findOne({

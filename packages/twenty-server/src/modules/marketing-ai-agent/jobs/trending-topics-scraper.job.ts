@@ -53,7 +53,8 @@ export class TrendingTopicsScraperJob {
 
       // Get active campaigns to determine relevant categories and keywords
       const campaignRepository =
-        await this.twentyORMGlobalManager.getRepository<MarketingCampaignWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepositoryForWorkspace<MarketingCampaignWorkspaceEntity>(
+          data.workspaceId,
           'marketingCampaign',
         );
 

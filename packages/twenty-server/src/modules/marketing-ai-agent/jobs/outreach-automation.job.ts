@@ -44,7 +44,8 @@ export class OutreachAutomationJob {
     try {
       // Get campaign details
       const campaignRepository =
-        await this.twentyORMGlobalManager.getRepository<MarketingCampaignWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepositoryForWorkspace<MarketingCampaignWorkspaceEntity>(
+          data.workspaceId,
           'marketingCampaign',
         );
 
@@ -66,7 +67,8 @@ export class OutreachAutomationJob {
 
       // Get leads that need outreach
       const leadRepository =
-        await this.twentyORMGlobalManager.getRepository<ProspectLeadWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepositoryForWorkspace<ProspectLeadWorkspaceEntity>(
+          data.workspaceId,
           'prospectLead',
         );
 
@@ -94,7 +96,8 @@ export class OutreachAutomationJob {
       );
 
       const messageRepository =
-        await this.twentyORMGlobalManager.getRepository<OutreachMessageWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepositoryForWorkspace<OutreachMessageWorkspaceEntity>(
+          data.workspaceId,
           'outreachMessage',
         );
 
@@ -238,7 +241,8 @@ export class OutreachAutomationJob {
     );
 
     const campaignRepository =
-      await this.twentyORMGlobalManager.getRepository<MarketingCampaignWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<MarketingCampaignWorkspaceEntity>(
+        workspaceId,
         'marketingCampaign',
       );
 

@@ -28,7 +28,8 @@ export class SocialMediaOutreachService {
     this.logger.log(`Sending outreach message ${outreachMessageId}`);
 
     const messageRepository =
-      await this.twentyORMGlobalManager.getRepository<OutreachMessageWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<OutreachMessageWorkspaceEntity>(
+        workspaceId,
         'outreachMessage',
       );
 
@@ -118,7 +119,8 @@ export class SocialMediaOutreachService {
     );
 
     const messageRepository =
-      await this.twentyORMGlobalManager.getRepository<OutreachMessageWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<OutreachMessageWorkspaceEntity>(
+        workspaceId,
         'outreachMessage',
       );
 
@@ -175,7 +177,8 @@ export class SocialMediaOutreachService {
     this.logger.log(`Tracking ${eventType} event for message ${messageId}`);
 
     const messageRepository =
-      await this.twentyORMGlobalManager.getRepository<OutreachMessageWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<OutreachMessageWorkspaceEntity>(
+        workspaceId,
         'outreachMessage',
       );
 
@@ -206,7 +209,8 @@ export class SocialMediaOutreachService {
 
       if (message?.leadId) {
         const leadRepository =
-          await this.twentyORMGlobalManager.getRepository<ProspectLeadWorkspaceEntity>(
+          await this.twentyORMGlobalManager.getRepositoryForWorkspace<ProspectLeadWorkspaceEntity>(
+            workspaceId,
             'prospectLead',
           );
 

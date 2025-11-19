@@ -42,7 +42,8 @@ export class LeadDiscoveryJob {
     try {
       // Get campaign details
       const campaignRepository =
-        await this.twentyORMGlobalManager.getRepository<MarketingCampaignWorkspaceEntity>(
+        await this.twentyORMGlobalManager.getRepositoryForWorkspace<MarketingCampaignWorkspaceEntity>(
+          data.workspaceId,
           'marketingCampaign',
         );
 
@@ -163,7 +164,8 @@ export class LeadDiscoveryJob {
     );
 
     const campaignRepository =
-      await this.twentyORMGlobalManager.getRepository<MarketingCampaignWorkspaceEntity>(
+      await this.twentyORMGlobalManager.getRepositoryForWorkspace<MarketingCampaignWorkspaceEntity>(
+        workspaceId,
         'marketingCampaign',
       );
 
